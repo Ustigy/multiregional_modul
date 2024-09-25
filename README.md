@@ -69,7 +69,7 @@ php artisan migrate
 ### 8. Заполните базу данных
 
 ```bash
-php artisan db:seed
+php artisan import:cities
 ```
 
 ### 9. Соберите ассеты
