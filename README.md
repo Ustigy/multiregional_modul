@@ -72,13 +72,19 @@ php artisan migrate
 php artisan import:cities
 ```
 
-### 9. Соберите ассеты
+### 9. Сгенерируйте ключ шифрования
+
+```bash
+php artisan key:generate
+```
+
+### 10. Соберите ассеты
 
 ```bash
 npm run build
 ```
 
-### 9. Запустите сервер
+### 11. Запустите сервер
 
 ```bash
 php artisan serve
