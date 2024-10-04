@@ -14,16 +14,6 @@ use App\Http\Controllers\CityController;
 |
 */
 
-// Route::get('/', [CityController::class, 'index'])->name('index');
-// Route::get('/{slug}', [CityController::class, 'index'])->name('city.index');
-// Route::get('/{slug}/about', [CityController::class, 'about'])->name('city.about');
-// Route::get('/{slug}/news', [CityController::class, 'news'])->name('city.news');
-
-// Route::get('/', [CityController::class, 'index'])->name('index');
-// Route::get('/{slug}', [CityController::class, 'index'])->name('city.index');
-// Route::get('/about', [CityController::class, 'about'])->name('city.about');
-// Route::get('/news', [CityController::class, 'news'])->name('city.news');
-
 Route::get('/', [CityController::class, 'index'])->name('index');
 Route::get('/{slug}', [CityController::class, 'index'])->name('city.index');
 Route::get('/{slug}/about', [CityController::class, 'about'])->name('city.about');

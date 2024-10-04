@@ -9,18 +9,17 @@ class CityController extends Controller
 {
     public function index($slug = null) 
     {
-        if (!$slug && session('selected_city')) {
-            return redirect()->route('city.index', ['slug' => session('selected_city.slug')], 301);
-        }
-
-        $cities = City::all();
-
-        if($slug) {
+        if ($slug) {
             $city = City::where('slug', $slug)->firstOrFail();
             session(['selected_city' => $city]);
+            return view('index', ['cities' => City::all(), 'selectedCity' => $city]);
         }
 
-        return view('index', ['cities' => $cities]);
+        if (session('selected_city')) {
+            return redirect()->route('city.index', ['slug' => session('selected_city.slug')]);
+        }
+
+        return view('index', ['cities' => City::all(), 'selectedCity' => null]);
     }
 
     public function about()

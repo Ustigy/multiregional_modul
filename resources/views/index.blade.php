@@ -8,7 +8,7 @@
     @foreach ($cities as $city)
         <li class="mb-2">
             <a href="{{ route('city.index', ['slug' => $city->slug]) }}" class="text-muted ms-3">
-                @if (session('selected_city') && session('selected_city.slug') == $city->slug)
+                @if ($selectedCity && $selectedCity->slug == $city->slug)
                     <strong>{{ $city->name }}</strong>
                 @else
                     {{ $city->name }}
